@@ -1,7 +1,6 @@
 ---
 name: Test Ansible roles with Molecule
 description: Run Molecule to test Ansible roles
-author: Robert de Bock <robert@meinit.nl>
 
 inputs:
   namespace:
@@ -30,7 +29,7 @@ inputs:
 
 runs:
   using: docker
-  image: 'docker://robertdebock/github-action-molecule:4.0.8'
+  image: 'docker://local/molecule-image:1.0.0'
   env:
     ANSIBLE_ROLES_PATH: "../"
     ANSIBLE_ASYNC_DIR: "/tmp/.ansible_async"
